@@ -1,8 +1,8 @@
-git clone --depth=1 https://github.com/CuriousNom/android_device_samsung_gta4l-common device/samsung/gta4l-common
-git clone --depth=1 https://github.com/CuriousNom/proprietary_vendor_samsung_gta4l-common vendor/samsung/gta4l-common
-git clone --depth=1 https://github.com/CuriousNom/proprietary_vendor_samsung_gta4lwifi vendor/samsung/gta4lwifi
-git clone --depth=1 https://github.com/CuriousNom/android_kernel_samsung_gta4l kernel/samsung/gta4l
-git clone --depth=1 https://github.com/CuriousNom/android_hardware_samsung.git hardware/tmp
+git clone --depth=1 https://github.com/Matrixx-Devices/android_device_samsung_gta4l-common device/samsung/gta4l-common
+git clone --depth=1 https://github.com/Matrixx-Devices/android_vendor_samsung_gta4l-common vendor/samsung/gta4l-common
+git clone --depth=1 https://github.com/Matrixx-Devices/android_vendor_samsung_gta4lwifi vendor/samsung/gta4lwifi
+git clone --depth=1 https://github.com/Matrixx-Devices/android_kernel_samsung_gta4l kernel/samsung/gta4l
+git clone --depth=1 https://github.com/Matrixx-Devices/android_hardware_samsung hardware/tmp
 cp -r hardware/tmp/* hardware/samsung/
 rm -rf hardware/tmp
 
