@@ -8,4 +8,4 @@
 
 mkdir prebuilts/clang/host/linux-x86/clang-neutron; cd prebuilts/clang/host/linux-x86/clang-neutron;
 curl -LO "https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman";
-chmod +x antman; ./antman -S; ./antman --patch=glibc; cd ../../../../../;sed -i '/CLANG_EXTRA_FLAGS += --hip-path=\/dev\/null/d' vendor/lineage/build/tasks/kernel.mk;
+chmod +x antman; ./antman -S --noaxel; ./antman --patch=glibc --noaxel; cd ../../../../../;sed -i '/CLANG_EXTRA_FLAGS += --hip-path=\/dev\/null/d' vendor/lineage/build/tasks/kernel.mk;
