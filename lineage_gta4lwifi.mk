@@ -32,6 +32,40 @@ MATRIXX_BATTERY := 7040mAh
 MATRIXX_DISPLAY := 1200x2000
 WITH_GMS := false
 
+# friendly tip: builders can use vendor init_xxx.cpp as workaround for spacing
+# e.g. property_override("ro.rising.chipset", "Snapdragon 870 5G");
+# friendly tip: builders can use vendor init_xxx.cpp as workaround for spacing
+# e.g. property_override("ro.rising.maintainer", "maintainer");
+
+# Chipset and Maintainer Prop
+#In lineage_<device>.mk Add the following properties to `PRODUCT_BUILD_PROP_OVERRIDES`
+
+Add the following variables:
+
+# Lunch banner maintainer variable
+RISING_MAINTAINER="Aryan"
+
+# Chipset/Maintainer properties (ro.rising.chipset/ro.rising.maintainer) 
+# (Optional if builder is setting properties via init_<device>.cpp)
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Snapdragon 662" \
+    RisingMaintainer="Aryan"
+
+# chipset flag enclose var with "" if more than one
+# this will reflect on build/display version, a firmware package/zip name 
+# e.g. risingOS-6.0-COMMUNITY-device-AOSP.zip - AOSP is the default package type, WITH_GMS will override the package type to PIXEL
+RISING_PACKAGE_TYPE := "VANILLA_AOSP"
+
+# disable/enable blur support, default is false
+TARGET_ENABLE_BLUR := true
+
+# whether to ship aperture camera, default is false
+PRODUCT_NO_CAMERA := false
+
+# Wether to ship lawnchair launcher
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true/false 
+
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := gta4lwifi
 PRODUCT_NAME := lineage_gta4lwifi
