@@ -40,8 +40,6 @@ WITH_GMS := false
 # Chipset and Maintainer Prop
 #In lineage_<device>.mk Add the following properties to `PRODUCT_BUILD_PROP_OVERRIDES`
 
-Add the following variables:
-
 # Lunch banner maintainer variable
 RISING_MAINTAINER="Aryan"
 
